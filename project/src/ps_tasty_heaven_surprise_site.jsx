@@ -32,6 +32,17 @@ export default function PsTastyHeaven() {
       { id: 'croaker-fish', name: 'Croaker Fish', price: '₦3,000' },
     ],
   }
+  const galleryItems = [
+  { id: 1, name: 'Meat Pie', image: '/gallery/meatpie.jpg' },
+  { id: 2, name: 'Spaghetti', image: '/gallery/spaghetti.jpg' },
+  { id: 3, name: 'Shawarma Wrap', image: '/gallery/shawarma.jpg' },
+  { id: 4, name: 'Plain Cookies', image: '/gallery/plaincookies.jpg' },
+  { id: 5, name: 'Cupcakes', image: '/gallery/cupcakes.jpg' },
+  { id: 6, name: 'Foli Cake', image: '/gallery/folicake.jpg' },
+  { id: 7, name: 'Chocolate Chip Cookies', image: '/gallery/chocolatechipcookies.jpg' },
+
+  // Add more items as needed
+]
 
   const handleItemClick = (item) => {
     const message = `Hi P's Tasty Heaven! I want to order ${item.name}. Can you provide more details?`
@@ -318,6 +329,53 @@ export default function PsTastyHeaven() {
               <img src="/shawarma.jpg" alt="Delicious shawarma" className="object-cover w-full h-full" />
             </motion.div>
           </div> 
+        </motion.section>
+
+        {/* Food Gallery Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="max-w-6xl mx-auto mt-20"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#FCEBE5' }}>
+              Food Gallery
+            </h2>
+            <p className="text-gray-400 text-lg">A visual feast of our delicious offerings</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {galleryItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-xl border border-white/10"
+              >
+                <img 
+                  src={item.image} 
+                  alt={item.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="text-white font-semibold text-lg mb-2">{item.name}</h3>
+                    <button
+                      onClick={() => handleItemClick({ name: item.name, price: 'Contact' })}
+                      className="text-sm px-4 py-2 rounded-full bg-red-500 hover:bg-red-600 transition-colors"
+                    >
+                      Order Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.section>
 
         <footer className="max-w-6xl mx-auto mt-20 pt-12 pb-8 border-t border-white/10">
