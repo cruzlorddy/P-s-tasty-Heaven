@@ -5,18 +5,20 @@ import { ShoppingCart, Phone, Star, ChefHat } from 'lucide-react'
 export default function PsTastyHeaven() {
   const [selectedItem, setSelectedItem] = useState(null)
   const whatsappPrimary = '2349150375459'
-  const whatsappAlt = '2348037803768'
+  const whatsappAlt = '2349155542934'
 
   const menuItems = {
     snacks: [
       { id: 'meat-pie', name: 'Meat Pie', price: '₦1,000' },
       { id: 'cake-slice', name: 'Cake Slice', price: '₦1,500' },
-      { id: 'cupcakes', name: 'Cupcakes', price: '₦3,000' },
+      { id: 'cupcakes', name: 'Cupcakes', price: '₦500' },
       { id: 'fish-roll', name: 'Fish Roll', price: '₦800' },
       { id: 'chin-chin', name: 'Chin Chin', price: '₦1,000' },
       { id: 'shawarma', name: 'Shawarma', price: '₦5,500' },
       { id: 'cookies', name: 'Coconut Cookies', price: '₦1,500' },
       { id: 'cookies', name: 'Plain Cookies', price: '₦1,000' },
+      { id: 'cookies', name: 'Chocolate Chip Cookies', price: '₦2,000' },
+      // 
     ],
     food: [
       { id: 'jollof-rice', name: 'Jollof Rice', price: '₦3,000' },
@@ -35,7 +37,7 @@ export default function PsTastyHeaven() {
       { id: 'turkey', name: 'Turkey', price: '₦5,000' },
       { id: 'chicken', name: 'Chicken', price: '₦4,000' },
       { id: 'eggs', name: 'Eggs', price: '₦500' },
-      { id: 'beef', name: 'Beef', price: '₦1,500' },
+      { id: 'beef', name: 'Beef', price: '₦1,000' },
       { id: 'croaker-fish', name: 'Croaker Fish', price: '₦3,000' },
     ],
   }
