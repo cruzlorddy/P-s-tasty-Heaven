@@ -15,10 +15,12 @@ export default function PsTastyHeaven() {
       { id: 'fish-roll', name: 'Fish Roll', price: '₦800' },
       { id: 'chin-chin', name: 'Chin Chin', price: '₦1,000' },
       { id: 'shawarma', name: 'Shawarma', price: '₦5,500' },
+      { id: 'milkshake', name: 'Milkshake ', price: '₦1,500' },
+      { id: 'zobo', name: 'Fruit Zobo', price: '₦1,000 & ₦500' },
       { id: 'cookies', name: 'Coconut Cookies', price: '₦1,500' },
       { id: 'cookies', name: 'Plain Cookies', price: '₦1,000' },
       { id: 'cookies', name: 'Chocolate Chip Cookies', price: '₦2,000' },
-      // 
+      // Milkshake 
     ],
     food: [
       { id: 'jollof-rice', name: 'Jollof Rice', price: '₦3,000' },
