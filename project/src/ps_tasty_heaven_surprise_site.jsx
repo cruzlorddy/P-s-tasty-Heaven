@@ -283,7 +283,7 @@ export default function PsTastyHeaven() {
 
                 {/* Shawarma Combos */}
                 <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
-                  <span className="text-2xl">🍖</span>
+                  {/* <span className="text-2xl"></span> */}
                   <div className="flex-1">
                     <h3 className="font-semibold text-white">Regular Combo 1</h3>
                     <p className="text-sm text-gray-400">Beef or chicken chunks · Extra creamy</p>
@@ -292,7 +292,7 @@ export default function PsTastyHeaven() {
                 </div>
 
                 <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
-                  <span className="text-2xl">🍱</span>
+                  {/* <span className="text-2xl">🍱</span> */}
                   <div className="flex-1">
                     <h3 className="font-semibold text-white">Regular Combo 2</h3>
                     <p className="text-sm text-gray-400">Single sausage · Beef or chicken chunks · Extra creamy</p>
@@ -301,7 +301,7 @@ export default function PsTastyHeaven() {
                 </div>
 
                 <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
-                  <span className="text-2xl">🎁</span>
+                  {/* <span className="text-2xl"></span> */}
                   <div className="flex-1">
                     <h3 className="font-semibold text-white">Special Combo</h3>
                     <p className="text-sm text-gray-400">Single sausage · Beef or chicken chunks · Extra creamy</p>
