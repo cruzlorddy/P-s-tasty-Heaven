@@ -21,9 +21,16 @@ export default function PsTastyHeaven() {
     food: [
       { id: 'jollof-rice', name: 'Jollof Rice', price: '₦3,000' },
       { id: 'fried-rice', name: 'Fried Rice', price: '₦3,000' },
+      { id: 'asun-rice', name: 'Asun Rice', price: '₦3,000' },
       { id: 'egusi-soup', name: 'Egusi Soup', price: '₦3,000' },
+      { id: 'okro-soup', name: 'Okro soup', price: '₦3,000' },
+      { id: 'banga-soup', name: 'Banga soup', price: '₦3,000' },
+      { id: 'melon-soup', name: 'Melon pepper Soup', price: '₦3,000' },
+      { id: 'banga-soup', name: 'Vegetable Soup', price: '₦3,000' },
+      { id: 'fried-noodle', name: 'Fried Noodles', price: '₦2,500' },
       { id: 'african-delicacies', name: 'Other African Delicacies', price: 'Contact' },
     ],
+    
     proteins: [
       { id: 'turkey', name: 'Turkey', price: '₦5,000' },
       { id: 'chicken', name: 'Chicken', price: '₦4,000' },
@@ -270,33 +277,63 @@ export default function PsTastyHeaven() {
                 Try our mouth-watering combo meals perfect for any occasion
               </p>
 
-              <div className="space-y-4 mb-8">
+                            <div className="space-y-4 mb-8">
+
+                {/* Shawarma Combos */}
+                <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                  <span className="text-2xl">🍖</span>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-white">Regular Combo 1</h3>
+                    <p className="text-sm text-gray-400">Beef or chicken chunks · Extra creamy</p>
+                  </div>
+                  <span className="text-xl font-bold text-red-400">₦4,000</span>
+                </div>
+
                 <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
                   <span className="text-2xl">🍱</span>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-white">Regular Combo</h3>
-                    <p className="text-sm text-gray-400">Perfect for one</p>
+                    <h3 className="font-semibold text-white">Regular Combo 2</h3>
+                    <p className="text-sm text-gray-400">Single sausage · Beef or chicken chunks · Extra creamy</p>
                   </div>
-                  <span className="text-xl font-bold text-red-400">₦4,000</span>
+                  <span className="text-xl font-bold text-red-400">₦4,500</span>
                 </div>
 
                 <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
                   <span className="text-2xl">🎁</span>
                   <div className="flex-1">
                     <h3 className="font-semibold text-white">Special Combo</h3>
-                    <p className="text-sm text-gray-400">Extra special treat</p>
+                    <p className="text-sm text-gray-400">Single sausage · Beef or chicken chunks · Extra creamy</p>
                   </div>
                   <span className="text-xl font-bold text-red-400">₦5,000</span>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
-                  <span className="text-2xl">🌭</span>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-white">Extra Sausage</h3>
-                    <p className="text-sm text-gray-400">Add to any order</p>
+                {/* Add-on / individual items */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                  <div className="flex items-center gap-3 p-3 bg-white/3 rounded-lg border border-white/6">
+                    <span className="text-xl">🥩</span>
+                    <div className="flex-1">
+                      <div className="text-sm text-gray-200">Beef or chicken chunks</div>
+                    </div>
+                    <div className="text-sm font-semibold text-red-400">₦2,000</div>
                   </div>
-                  <span className="text-xl font-bold text-red-400">₦500</span>
+
+                  <div className="flex items-center gap-3 p-3 bg-white/3 rounded-lg border border-white/6">
+                    <span className="text-xl">🧈</span>
+                    <div className="flex-1">
+                      <div className="text-sm text-gray-200">Extra creamy</div>
+                    </div>
+                    <div className="text-sm font-semibold text-red-400">₦1,000</div>
+                  </div>
+
+                  <div className="flex items-center gap-3 p-3 bg-white/3 rounded-lg border border-white/6">
+                    <span className="text-xl">🌭</span>
+                    <div className="flex-1">
+                      <div className="text-sm text-gray-200">Extra sausage</div>
+                    </div>
+                    <div className="text-sm font-semibold text-red-400">₦500</div>
+                  </div>
                 </div>
+
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -326,7 +363,12 @@ export default function PsTastyHeaven() {
               whileHover={{ scale: 1.05 }}
               className="w-72 h-72 rounded-2xl overflow-hidden flex-shrink-0 shadow-2xl border-4 border-white/10"
             >
-              <img src="/shawarma.jpg" alt="Delicious shawarma" className="object-cover w-full h-full" />
+              <img src="/shawarma.jpg" 
+              alt="Delicious shawarma" 
+              onLoad={() => console.log('BG loaded: /shawarma.jpg')}
+             onError={(e) => console.warn('BG failed to load', e)}
+          
+              className="object-cover w-full h-full" />
             </motion.div>
           </div> 
         </motion.section>
@@ -360,6 +402,8 @@ export default function PsTastyHeaven() {
                 <img 
                   src={item.image} 
                   alt={item.name}
+                               onLoad={() => console.log('Gallery loaded:', item.image)}
+                  onError={(e) => console.warn('Gallery failed:', item.image, e)}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
