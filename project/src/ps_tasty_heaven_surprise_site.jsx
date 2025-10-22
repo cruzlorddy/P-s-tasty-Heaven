@@ -442,7 +442,7 @@ export default function PsTastyHeaven() {
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <Phone className="w-4 h-4 text-red-400" />
-                  <span>+234 803 780 3768</span>
+                  <span>+234 902 256 4784</span>
                 </div>
               </div>
             </div>
