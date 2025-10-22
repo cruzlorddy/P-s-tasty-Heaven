@@ -435,6 +435,7 @@ export default function PsTastyHeaven() {
               </p>
             </div>
 
+         
             <div>
               <h3 className="text-xl font-bold mb-4" style={{ color: '#FCEBE5' }}>Contact Us</h3>
               <div className="space-y-2 text-sm">
@@ -444,10 +445,15 @@ export default function PsTastyHeaven() {
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <Phone className="w-4 h-4 text-red-400" />
-                  <span>+234 902 256 4784</span>
+                  <span>+234 902 256 4784 <span className="text-xs text-gray-400 ml-2">(for calls)</span></span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300">
+                  <Phone className="w-4 h-4 text-red-400" />
+                  <span>+234 701 651 5991 <span className="text-xs text-gray-400 ml-2">(for calls)</span></span>
                 </div>
               </div>
             </div>
+
 
             <div>
               <h3 className="text-xl font-bold mb-4" style={{ color: '#FCEBE5' }}>Quick Order</h3>
