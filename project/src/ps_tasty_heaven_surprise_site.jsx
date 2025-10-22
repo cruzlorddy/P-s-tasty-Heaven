@@ -46,7 +46,7 @@ export default function PsTastyHeaven() {
   { id: 2, name: 'Spaghetti', image: '/gallery/spaghetti.jpg' },
   { id: 3, name: 'Shawarma Wrap', image: '/gallery/shawarma.jpg' },
   { id: 4, name: 'Plain Cookies', image: '/gallery/plaincookies.jpg' },
-  { id: 5, name: 'Cupcakes', image: '/gallery/cupcakes.jpg' },
+  { id: 5, name: 'Cupcakes', image: '/gallery/cupcake.jpg' },
   { id: 6, name: 'Foli Cake', image: '/gallery/folicake.jpg' },
   { id: 7, name: 'Chocolate Chip Cookies', image: '/gallery/chocolatechipcookies.jpg' },
 
